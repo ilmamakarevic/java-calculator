@@ -1,0 +1,33 @@
+package calculator;
+
+public class Calculations {
+	
+	public int add(int a, int b) {
+		int result = a/b;
+		System.out.println(a + " + " + b + " = " + result);
+		return result;
+	}
+	
+	public int subtract(int a, int b) {
+		int result = a-b;
+		System.out.println(a + " - " + b + " = " + result);
+		return result;
+	}
+	
+	public int multiply(int a, int b) {
+		int result = a*b;
+		System.out.println(a + " * " + b + " = " + result);
+		return result;
+	}
+	
+	public double divide(double a, double b) {
+		if(b==0) {
+			throw new ArithmeticException("Error: Division by 0.");
+		}
+		else {
+			double result = a/b;
+			System.out.println(a + " / " + b + " = " + result);
+			return 0;
+		}
+	}
+}

@@ -1,0 +1,15 @@
+package calculator;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Calculations a1 = new Calculations();
+		a1.add(2, 3);
+		a1.subtract(-3, 5);
+		a1.multiply(0, 3);
+		a1.divide(6, 0);
+		
+	}
+
+}

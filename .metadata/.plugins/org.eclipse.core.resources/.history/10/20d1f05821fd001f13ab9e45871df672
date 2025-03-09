@@ -1,0 +1,17 @@
+package calculator;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Calculations a1 = new Calculations();
+		System.out.println(a1.add(-12, 3));
+		System.out.println(a1.subtract(-3, 5));
+		System.out.println(a1.multiply(0, 3));
+		System.out.println(a1.divide(6, 9));
+		
+		
+		
+	}
+
+}
