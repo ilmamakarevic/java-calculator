@@ -50,7 +50,7 @@ public class Caluclations {
 	}
 	
 	public double squareRoot(double a) {
-		System.out.print("Square root of " + a );
+		System.out.print("Square root of " + a + " is " );
 		return Math.sqrt(a);
 	}
 }
