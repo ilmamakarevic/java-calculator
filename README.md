@@ -1,2 +1,2 @@
-# java-advanced-calculator
+# advanced-calculator
  
