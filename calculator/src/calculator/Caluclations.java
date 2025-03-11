@@ -2,18 +2,15 @@ package calculator;
 
 public class Caluclations {
 	
-	public int add(int a, int b) {
-		System.out.print(a + " + " + b + " = " );
+	public double add(double a, double b) {
 		return a+b;
 	}
 	
-	public int subtract(int a, int b) {
-		System.out.print(a + " - " + b + " = ");
+	public double subtract(double a, double b) {
 		return a-b;
 	}
 	
-	public int multiply(int a, int b) {
-		System.out.print(a + " * " + b + " = ");
+	public double multiply(double a, double b) {
 		return a*b;
 	}
 	
@@ -22,18 +19,16 @@ public class Caluclations {
 			throw new ArithmeticException("Error: Division by 0.");
 		}
 		else {
-			System.out.print(a + " / " + b + " = ");
 			return a/b;
 		}
 	}
 
-	public int remainder(int a, int b) {
-		System.out.print(a + " % " + b + " = ");
+	public double remainder(double a, double b) {
 		return a%b;
 	}
 	
-	public int exponentiation(int a, int b) {
-		int result=1;
+	public double exponentiation(double a, double b) {
+		double result=1;
 		
 		if(b==0) {
 			return 1;

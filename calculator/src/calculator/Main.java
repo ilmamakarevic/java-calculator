@@ -18,55 +18,82 @@ public class Main {
 
 		Scanner myObj = new Scanner(System.in); //for user input
 		char operation;
+		double result = 0;
+		boolean firstIn = true;
+
+		System.out.println("Key + triggers sum operation.\n Key - triggers subtraction operation.\n Key * triggers multiplication.\n Key / triggers division.\n Key ^ triggers exponentiation.\n Key s triggers square root operation.\n Key % triggers remainder operation.\n Key = triggers particular operation to execute.\n To quit program use 'q' or 'Q'\n  ");
 
 		do {
+			if(firstIn){
+				result = myObj.nextDouble();
+				firstIn = false;
+			} else {
+				System.out.print("Do you want to continue with the previous result (" + result + ") or enter a new number? (Enter 'c' for continue or 'n' for new): ");
+                char choice = myObj.next().charAt(0);
+                
+                if (choice == 'n') {
+                    System.out.print("Enter a new number: ");
+                    result = myObj.nextDouble();  // Get a new number
+                }
+				else if(choice == 'q'){
+					System.out.println("End.");
+					break;
+				}
+			}
 
-			// System.out.println("Enter a number: ");
-			
-			int number1 = myObj.nextInt();
-			operation = myObj.next().charAt(0);
+			operation = myObj.next().charAt(0); //enter operation
+
+			if(operation == 'q' || operation == 'Q'){
+				System.out.println("End.");
+				break;
+			}
+
+			double number2 = 0;
+
+            if (operation != 's' && myObj.hasNextDouble()) {
+                number2 = myObj.nextDouble();
+            } else {
+				
+			}
 
 			switch (operation) {
 				case '+':
-					int number2 = myObj.nextInt();
-					System.out.println(clc.add(number1, number2));
+					result = clc.add(result, number2);
 					break;
 
 				case '-':
-					int number3 = myObj.nextInt();
-					System.out.println(clc.subtract(number1, number3));
+					result = clc.subtract(result, number2);
 					break;
 
 				case '*':
-					int number4 = myObj.nextInt();
-					System.out.println(clc.multiply(number1, number4));
+					result = clc.multiply(result, number2);
 					break;
 
 				case '/':
-					int number5 = myObj.nextInt();
-					System.out.println(clc.divide(number1, number5));
+					result = clc.divide(result, number2);
 					break;
 
 				case '%':
-					int number6 = myObj.nextInt();
-					System.out.println(clc.remainder(number1, number6));
+					result = clc.remainder(result, number2);
 					break;
 
 				case '^':
-					int number7 = myObj.nextInt();
-					System.out.println(clc.exponentiation(number1, number7));
+					result = clc.exponentiation(result, number2);
 					break;
 
 				case 's':
-					System.out.println(clc.squareRoot(number1));
+					result = clc.squareRoot(result);
 					break;
 				
-				// case '=':
 				default:
+					System.out.println("Error. Try again. ");
 					break;
 			}
-		} while (operation != 'q' || operation != 'Q');
-		
+			System.out.println(result);
+			
+		} while (true);
+	
+		myObj.close();
 
 	}
 
