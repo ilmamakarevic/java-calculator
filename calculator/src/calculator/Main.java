@@ -17,14 +17,14 @@ public class Main {
 		// System.out.println(clc.squareRoot(5));
 
 		Scanner myObj = new Scanner(System.in); //for user input
-
-		// System.out.println("Enter a number: ");
-		
-		int number1 = myObj.nextInt();
-		char operation = myObj.next().charAt(0);
+		char operation;
 
 		do {
+
+			// System.out.println("Enter a number: ");
 			
+			int number1 = myObj.nextInt();
+			operation = myObj.next().charAt(0);
 
 			switch (operation) {
 				case '+':
