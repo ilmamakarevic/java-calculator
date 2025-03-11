@@ -35,7 +35,7 @@ public class Main {
                     System.out.print("Enter a new number: ");
                     result = myObj.nextDouble();  // Get a new number
                 }
-				else if(choice == 'q'){
+				else if(choice == 'q'){ // Ends the program
 					System.out.println("End.");
 					break;
 				}
@@ -51,7 +51,7 @@ public class Main {
 			double number2 = 0;
 
             if (operation != 's' && myObj.hasNextDouble()) {
-                number2 = myObj.nextDouble();
+                number2 = myObj.nextDouble(); //enter second number
             } else {
 				
 			}
